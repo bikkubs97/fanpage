@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  
+  
+
+  <title>Kill Bill Fanpage</title>
+</head>
+
+<body>
+  <script type="application/javascript" src="/script.js" defer></script>
+
+
+  <section class="hero">
+    <nav class="nav">
+      <ul>
+        <li>Home</li>
+        <li>Code</li>
+        <li>Prototype</li>
+
+      </ul>
+    </nav>
+    <h1 class="bg">KILL BILL</h1>
+    <div class="dir">
+      <h4>WRITTEN AND DIRECTED BY</h4>
+      <h4 class="q"> QUNENTIN TARANTINO</h4>
+    </div>
+    <div class="bar">
+
+
+    </div>
+
+    <div class="plot">An assassin is shot by her ruthless employer, Bill, and other members of</br>
+       their assassination circle
+      but she lives to plot her vengeance.</div>
+
+    <div class="links">
+      <div class="imdb" ></div>
+      <div class="rt"></div>
+      <div class="yt"></div>
+
+    </div>
+
+    <div class="img">
+      <image src="/images/bride.png" height="600">
+
+    </div>
+
+  </section>
+  
+  <section class="review">
+    <div class="bar">
+      <h3>WRITE YOUR EMOTIONAL REVIEW</h3>
+    </div>
+    <p>
+      What do you think about this movie? We will analyze your tone, and colour code it.
+    </p>
+  
+    <form action="/submit-form" method="GET">
+      <label>
+        Name:
+        <input type="text" name="string1" maxlength="50" />
+      </label>
+      <label>
+        Rating:
+        <input type="number" name="number1" min="0" max="10" step="0.1" />
+      </label>
+      <br>
+      <label>
+        Review:</br>
+        <textarea name="string2" rows="10" cols="50" maxlength="600"></textarea>
+      </label> </br>
+      <button class="submit" type="submit">Submit</button>
+    </form>
+    
+    <h3 class="rev">REVIEWS</h3>
+    
+    <div class="boxes">
+      <% for (let i = 0; i < data.length; i++) { %>
+      <div> <h4 class="name"> <%= data[i].name %> </h4>
+         <p class="matter"><%= data[i].review %> </p> 
+        <h4 class="rating"> Rating : <%= data[i].rating %><h4></div>
+      <% } %>
+    </div>
+    
+  </section>
+  
+  <div class="bar3">  <h3>DID YOU KNOW?</h3> </div>
+
+  <section class="facts">
+   
+    <div class="cube">
+      <div class="side front"><h4>The Bride's yellow outfit was inspired by the outfit worn by Bruce Lee in his final film, Game of Death (1978).<h4></div>
+      <div class="side back"><h4>Despite being bleeped out in the film, the name of The Bride is revealed on her plane tickets to Okinawa and Tokyo.</h4></div>
+      <div class="side left"><h4>The members of the Deadly Viper Assassination Squad are all named after snakes. Bill drives a De Tomaso Mangusta. "Mangusta" is Italian for "Mongoose". </h4></div>
+      <div class="side right"><h4>The name the sword maker, Hattori Hanzo, is also the name of a samurai who was a warrior for the shogun, Oda Nobunaga, in the year of 1570.</h4></div>
+    </div>
+
+
+  </section>
+
+
+  <section class="trivia">
+    <div class="bar4">
+ 
+    <h3>  THE KILL BILL TRIVIA! </h3>
+    
+    
+    </div>
+
+    <div id="question-container" class="hide">
+    <div id="question">Question</div>
+  
+    <div id="answer-buttons" class="button-grid" >
+      <button class="button">Answer 1</button>
+      <button class="button">Answer 2</button>
+      <button class="button">Answer 3</button>
+      <button class="button">Answer 4</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="controls">
+    <button id="start" class="start-btn btn btn">Start</button>
+    <button id="next" class="next-btn btn hide">Next</button>
+  </section>
+<footer>
+  Created By Bikku BS
+</footer>
+  
+</body>
+
+</html>
