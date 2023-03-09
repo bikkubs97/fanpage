@@ -57,7 +57,7 @@
       <h3>WRITE YOUR EMOTIONAL REVIEW</h3>
     </div>
     <p>
-      What do you think about this movie? We will analyze your tone, and colour code it.
+      What do you think about this movie?  We will analyze your tone, and colour code it.
     </p>
 
     <div class="input">
@@ -83,12 +83,15 @@
     <h3 class="rev">REVIEWS</h3>
     
     <div class="boxes">
-      <% for (let i = 0; i < data.length; i++) { %>
-      <div> <h4 class="name"> <%= data[i].name %> </h4>
-         <p class="matter"><%= data[i].review %> </p> 
-        <h4 class="rating"> Rating : <%= data[i].rating %><h4></div>
+      <% for (let i = data.length - 1; i >= 0; i--) { %>
+        <div>
+          <h4 class="name"><%= data[i].name %></h4>
+          <p class="matter"><%= data[i].review %></p> 
+          <h4 class="rating">Rating: <%= data[i].rating %></h4>
+        </div>
       <% } %>
     </div>
+    
     
   </section>
   
